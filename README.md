@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/daedafusion/configuration.svg?branch=master)](https://travis-ci.org/daedafusion/configuration)
+
 # configuration
 
 Plugable configuration framework. Allows a heirarchy of providers (e.g. use system props, then etcd, then config file).

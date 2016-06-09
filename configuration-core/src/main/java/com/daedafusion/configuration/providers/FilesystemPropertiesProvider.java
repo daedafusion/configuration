@@ -34,7 +34,7 @@ public class FilesystemPropertiesProvider implements ConfigurationProvider
     @Override
     public void init() throws IOException
     {
-        String file = System.getProperty("filesystemPropertiesFile", "/etc/system.properties");
+        String file = System.getenv().getOrDefault("filesystemPropertiesFile", System.getProperty("filesystemPropertiesFile", "/etc/system.properties"));
 
         InputStream is = FileUtils.openInputStream(new File(file));
 

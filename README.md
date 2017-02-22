@@ -18,7 +18,7 @@ Pass ```-DconfigurationProviders``` as a comma separated list of classes to set 
 <dependency>
     <groupId>com.daedafusion</groupId>
     <artifactId>configuration</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
 </dependency
 ```
 
@@ -26,7 +26,7 @@ Pass ```-DconfigurationProviders``` as a comma separated list of classes to set 
 <dependency>
     <groupId>com.daedafusion</groupId>
     <artifactId>configuration</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.2-SNAPSHOT</version>
 </dependency
 ```
 

@@ -16,12 +16,12 @@ import static org.hamcrest.MatcherAssert.assertThat;
  */
 public class DefaultTest
 {
-//    private static final Logger log = LogManager.getLogger(DefaultTest.class);
+    private static final Logger log = LogManager.getLogger(DefaultTest.class);
 
     @Test
     public void testBasic()
     {
-//      log.info("FUCK");
+        log.info("Test logging");
         assertThat(Configuration.getInstance().getString("epiphyte"), is("avi"));
         assertThat(Configuration.getInstance().getString("doesn'texist"), is(nullValue()));
 

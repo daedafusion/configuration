@@ -1,7 +1,8 @@
 package com.daedafusion.configuration;
 
 import org.apache.commons.codec.binary.Base64;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.*;
 import java.net.URI;
@@ -13,7 +14,7 @@ import java.util.List;
  */
 public class Configuration
 {
-    private static final Logger        log         = Logger.getLogger(Configuration.class);
+    private static final Logger log         = LogManager.getLogger(Configuration.class);
 
     private static       Configuration ourInstance = new Configuration();
 

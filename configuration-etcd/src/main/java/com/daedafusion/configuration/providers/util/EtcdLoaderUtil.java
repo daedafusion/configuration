@@ -5,7 +5,8 @@ import com.daedafusion.jetcd.EtcdClientException;
 import com.daedafusion.jetcd.EtcdClientFactory;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.IOUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,7 +17,7 @@ import java.util.Properties;
  */
 public class EtcdLoaderUtil
 {
-    private static final Logger log = Logger.getLogger(EtcdLoaderUtil.class);
+    private static final Logger log = LogManager.getLogger(EtcdLoaderUtil.class);
 
     private EtcdClient client;
 

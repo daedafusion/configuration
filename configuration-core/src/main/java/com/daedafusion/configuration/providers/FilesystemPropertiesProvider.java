@@ -2,8 +2,8 @@ package com.daedafusion.configuration.providers;
 
 import com.daedafusion.configuration.ConfigurationProvider;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,7 +15,7 @@ import java.util.Properties;
  */
 public class FilesystemPropertiesProvider implements ConfigurationProvider
 {
-    private static final Logger log = Logger.getLogger(FilesystemPropertiesProvider.class);
+    private static final Logger log = LogManager.getLogger(FilesystemPropertiesProvider.class);
 
     private Properties properties;
 

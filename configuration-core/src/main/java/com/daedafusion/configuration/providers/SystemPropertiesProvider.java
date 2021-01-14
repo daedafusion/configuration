@@ -1,7 +1,8 @@
 package com.daedafusion.configuration.providers;
 
 import com.daedafusion.configuration.ConfigurationProvider;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 
@@ -10,7 +11,7 @@ import java.io.IOException;
  */
 public class SystemPropertiesProvider implements ConfigurationProvider
 {
-    private static final Logger log = Logger.getLogger(SystemPropertiesProvider.class);
+    private static final Logger log = LogManager.getLogger(SystemPropertiesProvider.class);
 
     @Override
     public String getName()

@@ -8,7 +8,8 @@ import org.apache.commons.pool2.BasePooledObjectFactory;
 import org.apache.commons.pool2.PooledObject;
 import org.apache.commons.pool2.impl.DefaultPooledObject;
 import org.apache.commons.pool2.impl.GenericObjectPool;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.net.URI;
@@ -18,7 +19,7 @@ import java.net.URI;
  */
 public class EtcdProvider implements ConfigurationProvider
 {
-    private static final Logger log = Logger.getLogger(EtcdProvider.class);
+    private static final Logger log = LogManager.getLogger(EtcdProvider.class);
 
     private final String etcdHost;
     private final int    etcdPort;

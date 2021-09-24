@@ -14,6 +14,7 @@
     <modules>
         <module>configuration-core</module>
         <module>configuration-etcd</module>
+        <module>configuration-aws-sm</module>
     </modules>
 
     <licenses>
@@ -72,6 +73,11 @@
                 <version>2.2</version>
             </dependency>
             <dependency>
+                <groupId>software.amazon.awssdk</groupId>
+                <artifactId>secretsmanager</artifactId>
+                <version>2.14.7</version>
+            </dependency>
+            <dependency>
                 <groupId>com.daedafusion</groupId>
                 <artifactId>jetcd</artifactId>
                 <version>1.1</version>
@@ -87,6 +93,7 @@
                 <artifactId>junit</artifactId>
                 <version>4.13.1</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -159,24 +166,6 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.eluder.coveralls</groupId>
-                <artifactId>coveralls-maven-plugin</artifactId>
-                <version>4.1.0</version>
-            </plugin>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.6</version>
-                <executions>
-                    <execution>
-                        <id>prepare-agent</id>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
 

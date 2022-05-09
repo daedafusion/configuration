@@ -85,12 +85,10 @@ public class Configuration
 
     public Boolean getBoolean(String key)
     {
-        String value = lookupKey(key);
-
-        return value != null ? Boolean.parseBoolean(value) : null;
+        return getBoolean(key, null);
     }
 
-    public boolean getBoolean(String key, boolean defaultValue)
+    public Boolean getBoolean(String key, Boolean defaultValue)
     {
         String value = lookupKey(key);
 
@@ -99,9 +97,7 @@ public class Configuration
 
     public Long getLong(String key)
     {
-        String value = lookupKey(key);
-
-        return value != null ? Long.valueOf(value) : null;
+        return getLong(key, null);
     }
 
     public Long getLong(String key, Long defaultValue)
@@ -113,9 +109,7 @@ public class Configuration
 
     public Integer getInteger(String key)
     {
-        String value = lookupKey(key);
-
-        return value != null ? Integer.valueOf(value) : null;
+        return getInteger(key, null);
     }
 
     public Integer getInteger(String key, Integer defaultValue)
@@ -135,6 +129,26 @@ public class Configuration
         String value = lookupKey(key);
 
         return value != null ? value : defaultValue;
+    }
+
+    public Float getFloat(String key) {
+        return getFloat(key, null);
+    }
+
+    public Float getFloat(String key, Float defaultValue) {
+        String value = lookupKey(key);
+
+        return value != null ? Float.valueOf(value) : defaultValue;
+    }
+
+    public Double getDouble(String key) {
+        return getDouble(key, null);
+    }
+
+    public Double getDouble(String key, Double defaultValue) {
+        String value = lookupKey(key);
+
+        return value != null ? Double.valueOf(key) : defaultValue;
     }
 
     public InputStream getResource(String key)
